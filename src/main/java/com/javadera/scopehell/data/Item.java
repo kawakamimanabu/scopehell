@@ -1,34 +1,30 @@
 package com.javadera.scopehell.data;
 
 /**
- *
+ * Dummy Object
  * @author
  *
  */
 public class Item {
-	private String keyString;
-	private String valueString;
+	private String label = "";
 
 	public Item(){}
 
-	public Item(String key, String value) {
-		keyString = key;
-		valueString = value;
+	public Item(String label) {
+		this.label = label;
+	}
+
+	@Override
+	public String toString() {
+		return "Item [label=" + label + "]";
 	}
 
 	// --- getter, setter ---
-	public String getKeyString() {
-		return keyString;
-	}
-	public void setKeyString(String keyString) {
-		this.keyString = keyString;
-	}
-	public String getValueString() {
-		return valueString;
-	}
-	public void setValueString(String valueString) {
-		this.valueString = valueString;
+	public String getLabel() {
+		return label;
 	}
 
-
+	public void setLabel(String label) {
+		this.label = label;
+	}
 }

@@ -14,33 +14,33 @@
 				<td><h:outputText id="appCountOutputTextId" value="#{applicationScopeCounter.counter}" /></td>
 			</tr>
 			<tr>
-				<td><h:commandButton action="#{applicationScopeCounter.countUpAction()}" value="カウントアップ(自画面遷移)" /></td>
+				<td><h:commandButton action="#{applicationScopeCounter.countUpAction()}" value="CountUp(with navigation)" /></td>
 			</tr>
 			<tr>
 				<td>
-					<p:commandButton value="カウントアップ(ajax)" actionListener="#{applicationScopeCounter.countUpActionListener()}" 
+					<p:commandButton value="CountUp(with ajax)" actionListener="#{applicationScopeCounter.countUpActionListener()}" 
 					                     ajax="true" 
 					                     update=":applicationScopeFormId:appCountOutputTextId" />
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p:commandButton value="RequestScopeに遷移(現在のカウンタ数値を渡します。)" action="#{requestScopeCounter.showScope(applicationScopeCounter.counter)}"/>
+					<p:commandButton value="Navigate to RequestScope(現在のカウンタ数値を渡します。)" action="#{requestScopeCounter.showScope(applicationScopeCounter.counter)}"/>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p:commandButton value="ViewScopeに遷移(現在のカウンタ数値を渡します。)" action="#{viewScopeCounter.showScope(applicationScopeCounter.counter)}"/>
+					<p:commandButton value="Navigate to ViewScope(現在のカウンタ数値を渡します。)" action="#{viewScopeCounter.showScope(applicationScopeCounter.counter)}"/>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p:commandButton value="SessionScopeに遷移(現在のカウンタ数値を渡します。)" action="#{sessionScopeCounter.showScope(applicationScopeCounter.counter)}"/>
+					<p:commandButton value="Navigate to SessionScope(現在のカウンタ数値を渡します。)" action="#{sessionScopeCounter.showScope(applicationScopeCounter.counter)}"/>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p:commandButton value="ApplicationScopeに遷移(現在のカウンタ数値を渡します。)" action="#{applicationScopeCounter.showScope(applicationScopeCounter.counter)}"/>
+					<p:commandButton value="Navigate to ApplicationScope(現在のカウンタ数値を渡します。)" action="#{applicationScopeCounter.showScope(applicationScopeCounter.counter)}"/>
 				</td>
 			</tr>
 		</table>
