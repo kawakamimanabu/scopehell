@@ -6,41 +6,41 @@
       xmlns:p="http://primefaces.org/ui">
 
 <h:form id="viewScopeFormId">
-	<h:body> 
-		<h:outputText value="#{viewScopeCounter.viewName}"/>
-		<br />
+	<h:body>
+		<h1>View Scope Page</h1>
+		<h:panelGrid id="viewScopePanelGridId" columns="2" border="1">
+			<h:outputLabel for="viewNameOutputTextId" value="backingBean's toString() value" />
+			<h:outputText  id="viewNameOutputTextId"  value="#{viewScopeCounter.viewName}"/>
+
+			<h:outputLabel for="countOutputTextId" value="current counter value" />
+			<h:outputText id="vsCountOutputTextId"   value="#{viewScopeCounter.counter}" />
+		</h:panelGrid>
+		<h:panelGrid id="vsOperationButtonPanelGridId" columns="2">
+			<h:commandButton action="#{viewScopeCounter.countUpAction()}" value="CountUp(with navigation)" />
+			<p:commandButton value="CountUp(with ajax)" actionListener="#{viewScopeCounter.countUpActionListener()}" 
+			                     ajax="true" 
+			                     update=":viewScopeFormId:vsCountOutputTextId" />
+		</h:panelGrid>
+		<hr />
 		<table>
 			<tr>
-				<td><h:outputText id="vsCountOutputTextId" value="#{viewScopeCounter.counter}" /></td>
-			</tr>
-			<tr>
-				<td><h:commandButton action="#{viewScopeCounter.countUpAction()}" value="CountUp(with navigation)" /></td>
-			</tr>
-			<tr>
 				<td>
-					<p:commandButton value="CountUp(with ajax)" actionListener="#{viewScopeCounter.countUpActionListener()}" 
-					                     ajax="true" 
-					                     update=":viewScopeFormId:vsCountOutputTextId" />
+					<p:commandButton value="Navigate to RequestScope(passing current counter value)" action="#{requestScopeCounter.showScope(viewScopeCounter.counter)}"/>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p:commandButton value="Navigate to RequestScope(現在のカウンタ数値を渡します。)" action="#{requestScopeCounter.showScope(viewScopeCounter.counter)}"/>
+					<p:commandButton value="Navigate to ViewScope(passing current counter value)" action="#{viewScopeCounter.showScope(viewScopeCounter.counter)}"/>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p:commandButton value="Navigate to ViewScope(現在のカウンタ数値を渡します。)" action="#{viewScopeCounter.showScope(viewScopeCounter.counter)}"/>
+					<p:commandButton value="Navigate to SessionScope(passing current counter value)" action="#{sessionScopeCounter.showScope(viewScopeCounter.counter)}"/>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p:commandButton value="Navigate to SessionScope(現在のカウンタ数値を渡します。)" action="#{sessionScopeCounter.showScope(viewScopeCounter.counter)}"/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<p:commandButton value="Navigate to ApplicationScope(現在のカウンタ数値を渡します。)" action="#{applicationScopeCounter.showScope(viewScopeCounter.counter)}"/>
+					<p:commandButton value="Navigate to ApplicationScope(passing current counter value)" action="#{applicationScopeCounter.showScope(viewScopeCounter.counter)}"/>
 				</td>
 			</tr>
 		</table>
