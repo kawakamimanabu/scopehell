@@ -4,6 +4,9 @@ study Java EE scopes
 comparing scope life time for Java EE.
 currently, checking request, view, session and application scopes.
 
+Every time you click "CountUp(with navigation)", the request is sent and page will be refreshed.
+If you click "CountUp(with ajax)", the counter display will be updated.
+
 I used WildFly to check.
 You can check its life cycle event in server.log.
 If you configure log levels, life cycle events can be checked.
@@ -11,5 +14,8 @@ If you configure log levels, life cycle events can be checked.
 * javax.enterprise.resource.webcontainer.jsf.timing
 * javax.enterprise.resource.webcontainer.jsf.lifecycle
 
+
+
 You can check how it looks like.
+
 http://scopehell-kwkmmnb.rhcloud.com/index.xhtml
