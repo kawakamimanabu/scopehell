@@ -16,6 +16,3 @@ If you configure log levels, life cycle events can be checked.
 
 
 
-You can check how it looks like.
-
-http://scopehell-kwkmmnb.rhcloud.com/index.xhtml
