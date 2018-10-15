@@ -1,6 +1,9 @@
 # scopehell
 sample for studying Java EE scopes
 
+[![Build Status](https://travis-ci.com/kawakamimanabu/scopehell.svg?branch=master)](https://travis-ci.com/kawakamimanabu/scopehell)
+
+## how to use
 comparing scope life time for Java EE.
 currently, checking request, view, session and application scopes.
 
