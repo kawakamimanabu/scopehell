@@ -10,15 +10,15 @@ import javax.faces.bean.ViewScoped;
 @ViewScoped
 public class ViewScopeCounter extends AbstractScopeCounter implements Serializable {
 
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 6739314454130644497L;
+/**
+ *
+ */
+private static final long serialVersionUID = 6739314454130644497L;
 
-	@PostConstruct
-	public void init() {
-		viewName = "viewScope";
-		super.init();
-	}
+  @PostConstruct
+  public void init() {
+    viewName = "viewScope";
+    super.init();
+  }
 
 }

@@ -10,15 +10,15 @@ import javax.inject.Named;
 @SessionScoped
 public class SessionScopeCounter extends AbstractScopeCounter implements Serializable {
 
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 3469067863193077426L;
+/**
+ *
+ */
+private static final long serialVersionUID = 3469067863193077426L;
 
-	@PostConstruct
-	public void init() {
-		viewName = "sessionScope";
-		super.init();
-	}
+  @PostConstruct
+  public void init() {
+    viewName = "sessionScope";
+    super.init();
+  }
 
 }

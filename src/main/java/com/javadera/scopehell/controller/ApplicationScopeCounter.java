@@ -10,10 +10,13 @@ import javax.inject.Named;
 @ApplicationScoped
 public class ApplicationScopeCounter extends AbstractScopeCounter implements Serializable {
 
-	@PostConstruct
-	public void init() {
-		viewName = "applicationScope";
-		super.init();
-	}
+  /**  */
+  private static final long serialVersionUID = -4529288885218319091L;
+
+  @PostConstruct
+  public void init() {
+    viewName = "applicationScope";
+    super.init();
+  }
 
 }

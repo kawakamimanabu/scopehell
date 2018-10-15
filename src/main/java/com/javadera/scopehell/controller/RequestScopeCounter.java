@@ -8,10 +8,10 @@ import javax.inject.Named;
 @RequestScoped
 public class RequestScopeCounter extends AbstractScopeCounter {
 
-	@PostConstruct
-	public void init() {
-		viewName = "requestScope";
-		super.init();
-	}
+  @PostConstruct
+  public void init() {
+    viewName = "requestScope";
+    super.init();
+  }
 
 }
